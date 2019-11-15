@@ -24,15 +24,26 @@ class Test{
     //isEmpty Testers
 
     /**
+     * creates checks if queue is empty after creation
      * @return true if test passed, false otherwise
      */
     bool isEmptyTest1();
 
     /**
+     * adds an element to the queue, checks if isEmpty
+     * @pre enqueue works correctly
      * @return true if test passed, false otherwise
      */
     bool isEmptyTest2();
 
+    //peekFront testers
+    /**
+     * checks if peekFront can peek an element
+     * @pre queue not empty
+     * @return true if test passed, false if failed
+     */
+    bool peekFrontTest1();
+    
     public:
     
 

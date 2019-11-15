@@ -26,6 +26,23 @@ bool Test::isEmptyTest1(){
     return(false);
 }
 
+bool Test::isEmptyTest2(){
+    m_myQueue->enqueue(1);
+    if(m_myQueue->isEmpty()){
+        return(false);
+    }
+    return(true);
+}
+
+bool Test::peekFrontTest1(){
+    if(m_myQueue->peekFront() == 1){
+        return(true);
+    }
+    return(false);
+}
+
+
+
 void Test::printer(bool result, std::string testName){
     if(result){
         std::cout << testName << ": PASSED\n";
