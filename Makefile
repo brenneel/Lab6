@@ -1,5 +1,8 @@
-QueueDemo: main.o Queue.o
-	g++ -g -Wall -std=c++11 main.o Queue.o -o QueueDemo
+QueueDemo: main.o Queue.o Test.o
+	g++ -g -Wall -std=c++11 main.o Queue.o Test.o -o QueueDemo
+
+Test.o: Test.h Test.cpp Queue.h
+	g++ -g -Wall -std=c++11 -c Test.cpp
 
 main.o: main.cpp 
 	g++ -g -std=c++11 -c main.cpp

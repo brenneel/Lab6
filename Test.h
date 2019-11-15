@@ -13,9 +13,18 @@ class Test{
 
     private:
     //private members
+    Queue m_myQueue* = nullptr;
+
+    //isEmpty Testers
 
     public:
     //public members
+
+    Test();
+
+    ~Test();
+
+    void run();
 
 
 
