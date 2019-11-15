@@ -14,6 +14,10 @@ Test::~Test(){
 void Test::run(){
     //run all test funcs here
     printer(isEmptyTest1(),"isEmptyTest1");
+    printer(isEmptyTest2(),"isEmptyTest2");
+    printer(peekFrontTest1(),"peekFrontTest1");
+    printer(dequeueTest1(),"dequeueTest1");
+    printer(enqueueTest1(),"enqueueTest1");
 }
 
 //isEmpty Testers
