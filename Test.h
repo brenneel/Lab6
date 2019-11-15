@@ -53,7 +53,7 @@ class Test{
     bool dequeueTest1();
 
     /**
-     * adds another element to the queue, checks if element is added to back
+     * adds 2 elements to the queue, checks if element is added to back
      * @pre queue has an element already
      * @return true if test passed, false if failed
      */

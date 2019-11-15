@@ -50,7 +50,19 @@ bool Test::dequeueTest1(){
 }
 
 bool Test::enqueueTest1(){
+    bool passed = true;
+    m_myQueue->enqueue(2);
+    m_myQueue->enqueue(3);
+    if(m_myQueue->peekFront != 2){
+        passed = false;
+    }
+    m_myQueue->dequeue();
 
+    if(m_myQueue->peekFront != 3){
+        passed = false;
+    }
+
+    return(passed);
 }
 
 
