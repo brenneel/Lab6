@@ -43,7 +43,21 @@ class Test{
      * @return true if test passed, false if failed
      */
     bool peekFrontTest1();
-    
+
+    /**
+     * removes the element from the queue
+     * @pre the queue has something in it
+     * @post the queue should be empty
+     * @return true if test passed, false if empty
+     */
+    bool dequeueTest1();
+
+    /**
+     * adds another element to the queue, checks if element is added to back
+     * @pre queue has an element already
+     * @return true if test passed, false if failed
+     */
+    bool enqueueTest1();
     public:
     
 

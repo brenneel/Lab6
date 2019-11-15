@@ -41,6 +41,18 @@ bool Test::peekFrontTest1(){
     return(false);
 }
 
+bool Test::dequeueTest1(){
+    m_myQueue->dequeue();
+    if(m_myQueue->isEmpty()){
+        return(true);
+    }
+    return(false);
+}
+
+bool Test::enqueueTest1(){
+
+}
+
 
 
 void Test::printer(bool result, std::string testName){
