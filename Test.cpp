@@ -7,13 +7,29 @@ Test::Test(){
 
 //the destructor
 Test::~Test(){
-    //destroyer of objects
-    //do I need to delete here? this may cause a leak
     delete m_myQueue;
-
 }
 
 //runner
 void Test::run(){
     //run all test funcs here
+}
+
+//isEmpty Testers
+
+bool Test::isEmptyTest1(){
+    if(m_myQueue->isEmpty())
+    {
+        return(true);
+    }
+    return(false);
+}
+
+void Test::printer(bool result, std::string testName){
+    if(result){
+        std::cout << testName << ": PASSED\n";
+    }
+    else{
+        std::cout << testName << ": FAILED\n";
+    }
 }
