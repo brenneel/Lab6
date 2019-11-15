@@ -13,6 +13,7 @@ Test::~Test(){
 //runner
 void Test::run(){
     //run all test funcs here
+    printer(isEmptyTest1(),"isEmptyTest1");
 }
 
 //isEmpty Testers
