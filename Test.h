@@ -12,22 +12,26 @@
 class Test{
 
     private:
-    //private members
-    Queue m_myQueue* = nullptr;
+    Queue *m_myQueue = nullptr;
 
     //isEmpty Testers
 
     public:
-    //public members
+    
 
+    /**
+     * @post construct the Test obj
+     */
     Test();
 
+    /**
+     * @post destroy the Test obj
+     */
     ~Test();
 
+    /**
+     * @post prints the results of the testing functions to console
+     */
     void run();
-
-
-
-
 };
 #endif
