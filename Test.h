@@ -74,7 +74,13 @@ class Test{
      */
     bool enqueueTest1();
 
-   
+   /**
+    * checks if dequeue removes an element from the front
+    * @pre queue has at least 2 elements
+    * @post queue should 1 element, the second element added
+    * @return true if test passed, false if failed
+    */
+   bool dequeueTest3();
 
 
     public:

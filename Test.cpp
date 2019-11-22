@@ -102,6 +102,22 @@ bool Test::dequeueTest2(){
     return(passed);
 }
 
+bool Test::dequeueTest3(){
+    delete m_myQueue;
+    m_myQueue = new Queue();
+    bool passed = true;
+
+    m_myQueue->enqueue(2);
+    m_myQueue->enqueue(3);
+
+    m_myQueue->dequeue();
+    if(m_myQueue->peekFront() != 3){
+        passed = false;
+    }
+
+    return(passed);
+}
+
 bool Test::enqueueTest1(){
     delete m_myQueue;
     m_myQueue = new Queue();
