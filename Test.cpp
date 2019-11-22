@@ -16,7 +16,9 @@ void Test::run(){
     printer(isEmptyTest1(),"isEmptyTest1");
     printer(isEmptyTest2(),"isEmptyTest2");
     printer(peekFrontTest1(),"peekFrontTest1");
+    printer(peekFrontTest2(),"peekFrontTest2");
     printer(dequeueTest1(),"dequeueTest1");
+    printer(dequeueTest2(), "dequeueTest2");
     printer(enqueueTest1(),"enqueueTest1");
 }
 
@@ -105,20 +107,14 @@ bool Test::enqueueTest1(){
     m_myQueue = new Queue();
     
     bool passed = true;
-    /*
+    
     m_myQueue->enqueue(2);
     m_myQueue->enqueue(3);
     if(m_myQueue->peekFront() != 2){
         passed = false;
     }
-    m_myQueue->dequeue();
 
-    if(m_myQueue->peekFront() != 3){
-        passed = false;
-    }
-*/
-    return(passed);
-    
+    return(passed); 
 }
 
 

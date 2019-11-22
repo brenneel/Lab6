@@ -45,7 +45,7 @@ class Test{
     bool peekFrontTest1();
 
     /**
-     * checks if peekFront correctly sees the value at the front of the queue
+     * checks if peekFront correctly sees the value when adding one value to the queue
      * @pre the queue must not be empty
      * @return true if test passed, false if failed
      */
@@ -68,14 +68,16 @@ class Test{
     bool dequeueTest2();
 
     /**
-     * adds 2 elements to the queue, checks if element is added to back
-     * @pre queue has an element already
+     * adds multiple elements, checks if element added to the back
+     * @pre queue empty
      * @return true if test passed, false if failed
      */
     bool enqueueTest1();
-    public:
-    
 
+   
+
+
+    public:
     /**
      * @post construct the Test obj
      */
