@@ -38,11 +38,18 @@ class Test{
 
     //peekFront testers
     /**
-     * checks if peekFront can peek an element
-     * @pre queue not empty
+     * checks if peekFront can peek an element of an empty queue
+     * @pre queue empty
      * @return true if test passed, false if failed
      */
     bool peekFrontTest1();
+
+    /**
+     * checks if peekFront correctly sees the value at the front of the queue
+     * @pre the queue must not be empty
+     * @return true if test passed, false if failed
+     */
+    bool peekFrontTest2();
 
     /**
      * removes the element from the queue

@@ -44,11 +44,29 @@ bool Test::isEmptyTest2(){
 bool Test::peekFrontTest1(){
     delete m_myQueue;
     m_myQueue = new Queue();
-
-    if(m_myQueue->peekFront() == 1){
-        return(true);
+    bool passed = false;
+    try{
+        if(m_myQueue->peekFront() == 1){
+            return(true);
+        }
+        return(false);
     }
-    return(false);
+    catch(...){
+        passed = true;
+    }
+    return(passed);
+}
+
+bool Test::peekFrontTest2(){
+    delete m_myQueue;
+    m_myQueue = new Queue();
+    bool passed = false;
+
+    m_myQueue->enqueue(1);
+    if(m_myQueue->peekFront() == 1){
+        passed = true;
+    }
+    return(passed);
 }
 
 bool Test::dequeueTest1(){
