@@ -75,19 +75,19 @@ class Test{
     bool dequeueTest2();
 
     /**
-     * adds multiple elements, checks if element added to the back
-     * @pre queue empty
-     * @return true if test passed, false if failed
-     */
-    bool enqueueTest1();
-
-   /**
     * checks if dequeue removes an element from the front
     * @pre queue has at least 2 elements
     * @post queue should 1 element, the second element added
     * @return true if test passed, false if failed
     */
    bool dequeueTest3();
+
+    /**
+     * adds multiple elements, checks if element added to the back
+     * @pre queue empty
+     * @return true if test passed, false if failed
+     */
+    bool enqueueTest1();
 
 
     public:

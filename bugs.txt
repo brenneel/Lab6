@@ -2,3 +2,8 @@ Potential issues:
 
 1: dequeue() has a type of void, but in the docs it says it should return
     the value of the entry at the front of the queue
+    --This could be an intentional change on Gibbons' part, but wanted to note it
+
+Bugs:
+1) PeekFront actually peeks the back of the queue
+2) Enqueue is causing memory leaks, there is a "new" that is not being deleted
