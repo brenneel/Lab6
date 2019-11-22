@@ -52,12 +52,20 @@ class Test{
     bool peekFrontTest2();
 
     /**
-     * removes the element from the queue
-     * @pre the queue has something in it
-     * @post the queue should be empty
+     * removes the element from an empty queue
+     * @pre the queue must be empty
+     * @post an error should be thrown
      * @return true if test passed, false if empty
      */
     bool dequeueTest1();
+
+    /**
+     * tries to remove an element from a queue with an element inside
+     * @pre the queue must have something inside it
+     * @post the queue should be empty
+     * @return true if passed, false if failed
+     */
+    bool dequeueTest2();
 
     /**
      * adds 2 elements to the queue, checks if element is added to back

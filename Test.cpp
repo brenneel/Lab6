@@ -85,6 +85,21 @@ bool Test::dequeueTest1(){
     return(passed); 
 }
 
+bool Test::dequeueTest2(){
+    delete m_myQueue;
+    m_myQueue = new Queue();
+    bool passed = false;
+
+    m_myQueue->enqueue(1);
+    m_myQueue->dequeue();
+
+    if(m_myQueue->isEmpty()){
+        passed = true;
+    }
+
+    return(passed);
+}
+
 bool Test::enqueueTest1(){
     delete m_myQueue;
     m_myQueue = new Queue();
