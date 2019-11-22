@@ -52,6 +52,13 @@ class Test{
     bool peekFrontTest2();
 
     /**
+     * checks if peekFront peeks the front or back
+     * @pre empty queue
+     * @return true if peeks front, false if peeks back (fails)
+     */
+    bool peekFrontTest3();
+
+    /**
      * removes the element from an empty queue
      * @pre the queue must be empty
      * @post an error should be thrown
