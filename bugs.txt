@@ -5,5 +5,5 @@ Potential issues:
     --This could be an intentional change on Gibbons' part, but wanted to note it
 
 Bugs:
-1) PeekFront actually peeks the back of the queue
+1) Enqueue adds elements to the front of the queue, not the back
 2) Enqueue is causing memory leaks, there is a "new" that is not being deleted

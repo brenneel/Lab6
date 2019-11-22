@@ -17,11 +17,10 @@ void Test::run(){
     printer(isEmptyTest2(),"Test2: queue not empty after enqueue: ");
     printer(peekFrontTest1(),"Test3: peekFront throws an error when peeking empty queue: ");
     printer(peekFrontTest2(),"Test4: peekFront can return the value when adding one element: ");
-    printer(peekFrontTest3(),"Test5: peekFront peeks the front: ");
-    printer(dequeueTest1(),"Test6: dequeue throws an error on empty queue: ");
-    printer(dequeueTest2(), "Test7: dequeue removes single element from queue: ");
-    printer(dequeueTest3(), "Test8: dequeue removes the front-most element: ");
-    printer(enqueueTest1(),"Test9: enqueue adds element to the back: ");
+    printer(dequeueTest1(),"Test5: dequeue throws an error on empty queue: ");
+    printer(dequeueTest2(), "Test6: dequeue removes single element from queue: ");
+    printer(dequeueTest3(), "Test7: dequeue removes the front-most element: ");
+    printer(enqueueTest1(),"Test8: enqueue adds element to the back: ");
 }
 
 //isEmpty Testers
@@ -73,22 +72,6 @@ bool Test::peekFrontTest2(){
     return(passed);
 }
 
-bool Test::peekFrontTest3(){
-    delete m_myQueue;
-    m_myQueue = new Queue();
-    bool passed = false;
-
-    m_myQueue->enqueue(1);
-    m_myQueue->enqueue(2);
-    if(m_myQueue->peekFront() == 1){
-        passed = true;
-    }
-    return(passed);
-}
-
-
-
-
 bool Test::dequeueTest1(){
     delete m_myQueue;
     m_myQueue = new Queue();
@@ -121,18 +104,18 @@ bool Test::dequeueTest2(){
 }
 
 bool Test::dequeueTest3(){
-    delete m_myQueue;
+     delete m_myQueue;
     m_myQueue = new Queue();
-    bool passed = true;
+    bool passed = false;
 
+    m_myQueue->enqueue(1);
     m_myQueue->enqueue(2);
-    m_myQueue->enqueue(3);
-
+    int val = m_myQueue->peekFront();
     m_myQueue->dequeue();
-    if(m_myQueue->peekFront() != 3){
-        passed = false;
+    if(m_myQueue->peekFront() != val){
+        passed = true;
     }
-
+    
     return(passed);
 }
 
@@ -143,8 +126,9 @@ bool Test::enqueueTest1(){
     bool passed = true;
     
     m_myQueue->enqueue(2);
+   int val = m_myQueue->peekFront();
     m_myQueue->enqueue(3);
-    if(m_myQueue->peekFront() != 2){
+    if(m_myQueue->peekFront() != val){
         passed = false;
     }
 
