@@ -13,15 +13,15 @@ Test::~Test(){
 //runner
 void Test::run(){
     //run all test funcs here
-    printer(isEmptyTest1(),"isEmptyTest1");
-    printer(isEmptyTest2(),"isEmptyTest2");
-    printer(peekFrontTest1(),"peekFrontTest1");
-    printer(peekFrontTest2(),"peekFrontTest2");
-    printer(peekFrontTest3(),"peekFrontTest3");
-    printer(dequeueTest1(),"dequeueTest1");
-    printer(dequeueTest2(), "dequeueTest2");
-    printer(dequeueTest3(), "dequeueTest3");
-    printer(enqueueTest1(),"enqueueTest1");
+    printer(isEmptyTest1(),"Test1: queue empty after creation: ");
+    printer(isEmptyTest2(),"Test2: queue not empty after enqueue: ");
+    printer(peekFrontTest1(),"Test3: peekFront throws an error when peeking empty queue: ");
+    printer(peekFrontTest2(),"Test4: peekFront can return the value when adding one element");
+    printer(peekFrontTest3(),"Test5: peekFront peeks the front: ");
+    printer(dequeueTest1(),"Test6: dequeue throws an error on empty queue: ");
+    printer(dequeueTest2(), "Test7: dequeue removes single element from queue: ");
+    printer(dequeueTest3(), "Test8: dequeue removes the front-most element: ");
+    printer(enqueueTest1(),"Test9: enqueue adds element to the back: ");
 }
 
 //isEmpty Testers
@@ -155,9 +155,9 @@ bool Test::enqueueTest1(){
 
 void Test::printer(bool result, std::string testName){
     if(result){
-        std::cout << testName << ": PASSED\n";
+        std::cout << testName << "PASSED\n";
     }
     else{
-        std::cout << testName << ": FAILED\n";
+        std::cout << testName << "FAILED\n";
     }
 }

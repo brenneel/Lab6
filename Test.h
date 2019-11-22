@@ -24,7 +24,7 @@ class Test{
     //isEmpty Testers
 
     /**
-     * creates checks if queue is empty after creation
+     * checks if queue is empty after creation
      * @return true if test passed, false otherwise
      */
     bool isEmptyTest1();
