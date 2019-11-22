@@ -72,12 +72,17 @@ bool Test::peekFrontTest2(){
 bool Test::dequeueTest1(){
     delete m_myQueue;
     m_myQueue = new Queue();
-
-    m_myQueue->dequeue();
-    if(m_myQueue->isEmpty()){
-        return(true);
+    bool passed = false;
+    try{
+        m_myQueue->dequeue();
+        if(m_myQueue->isEmpty()){
+            //do nothing, something didn't work
+        }
     }
-    return(false);
+    catch(...){
+        passed = true;
+    }
+    return(passed); 
 }
 
 bool Test::enqueueTest1(){
