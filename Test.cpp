@@ -1,16 +1,13 @@
 #include "Test.h"
 
-//constructor
 Test::Test(){
     m_myQueue = new Queue();
 }
 
-//the destructor
 Test::~Test(){
     delete m_myQueue;
 }
 
-//runner
 void Test::run(){
     //run all test funcs here
     printer(isEmptyTest1(),"Test1: queue empty after creation: ");
@@ -22,8 +19,6 @@ void Test::run(){
     printer(dequeueTest3(), "Test7: dequeue removes the front-most element: ");
     printer(enqueueTest1(),"Test8: enqueue adds element to the back: ");
 }
-
-//isEmpty Testers
 
 bool Test::isEmptyTest1(){
     if(m_myQueue->isEmpty())
@@ -134,8 +129,6 @@ bool Test::enqueueTest1(){
 
     return(passed); 
 }
-
-
 
 void Test::printer(bool result, std::string testName){
     if(result){
