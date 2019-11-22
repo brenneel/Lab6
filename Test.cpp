@@ -16,7 +16,7 @@ void Test::run(){
     printer(isEmptyTest1(),"Test1: queue empty after creation: ");
     printer(isEmptyTest2(),"Test2: queue not empty after enqueue: ");
     printer(peekFrontTest1(),"Test3: peekFront throws an error when peeking empty queue: ");
-    printer(peekFrontTest2(),"Test4: peekFront can return the value when adding one element");
+    printer(peekFrontTest2(),"Test4: peekFront can return the value when adding one element: ");
     printer(peekFrontTest3(),"Test5: peekFront peeks the front: ");
     printer(dequeueTest1(),"Test6: dequeue throws an error on empty queue: ");
     printer(dequeueTest2(), "Test7: dequeue removes single element from queue: ");
@@ -155,9 +155,9 @@ bool Test::enqueueTest1(){
 
 void Test::printer(bool result, std::string testName){
     if(result){
-        std::cout << testName << "PASSED\n";
+        std::cout << testName << "PASSED\n\n";
     }
     else{
-        std::cout << testName << "FAILED\n";
+        std::cout << testName << "FAILED\n\n";
     }
 }
